@@ -1,8 +1,8 @@
 {
   "name": "AiFrame",
   "about": "Фоторамка с нейросетью",
-  "version": "1.1",
-  "notes": "Добавлена OTA",
+  "version": "1.2",
+  "notes": "Решение проблемы с Кандинским",
   "builds": [
     {
       "chipFamily": "ESP8266",

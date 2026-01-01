@@ -9,6 +9,7 @@
 void setup() {
     Serial.begin(115200);
     Serial.println();
+    WiFi.mode(WIFI_AP_STA);
 
     db_init();
     sett_init();
@@ -18,7 +19,6 @@ void setup() {
     gen.setKey(db[kk::kand_token], db[kk::kand_secret]);
 
     // ======= AP =======
-    WiFi.mode(WIFI_AP_STA);
     WiFi.softAP("Kandinsky AP");
     
     tft.print("AiFrame v");
