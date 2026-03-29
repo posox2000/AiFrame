@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(~/.platformio/penv/bin/pip install:*)",
+      "Bash(python -c \"import intelhex; print\\(''ok''\\)\")",
+      "Bash(python3 -c \"import intelhex; print\\(''ok''\\)\")",
+      "Bash(python3:*)"
+    ]
+  }
+}
