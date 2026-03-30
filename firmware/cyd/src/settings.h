@@ -65,9 +65,14 @@ void build(sets::Builder& b) {
                 gen.setKey(db[kk::poll_key]);
                 db.update();
                 break;
+            case kk::gen_query:
+            case kk::gen_negative:
+                db.update();
+                break;
             case kk::auto_gen:
             case kk::auto_prd:
                 init_tmr();
+                db.update();
                 break;
         }
     }

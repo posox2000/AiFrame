@@ -6,6 +6,40 @@
 #include "settings.h"
 #include "tft.h"
 
+void show_splash() {
+    tft.fillScreen(TFT_BLACK);
+
+    // Title — centered, large
+    tft.setTextSize(3);
+    tft.setTextColor(TFT_WHITE, TFT_BLACK);
+    const char* title = "AI Picture Frame";
+    int titleX = (tft.width() - tft.textWidth(title)) / 2;
+    tft.setCursor(titleX < 0 ? 0 : titleX, 10);
+    tft.print(title);
+
+    tft.drawFastHLine(0, 52, tft.width(), TFT_DARKGREY);
+
+    // IP and SSID
+    tft.setTextSize(2);
+    tft.setTextColor(TFT_GREEN, TFT_BLACK);
+
+    String ip = (WiFi.status() == WL_CONNECTED) ? WiFi.localIP().toString() : WiFi.softAPIP().toString();
+    tft.setCursor(8, 62);
+    tft.print("IP:   "); tft.print(ip);
+
+    String ssid = db[kk::wifi_ssid].toString();
+    tft.setCursor(8, 88);
+    tft.print("SSID: "); tft.print(ssid.length() ? ssid : String("-"));
+
+    tft.drawFastHLine(0, 118, tft.width(), TFT_DARKGREY);
+
+    // Prompt
+    tft.setTextColor(TFT_YELLOW, TFT_BLACK);
+    tft.setCursor(8, 128);
+    String query = db[kk::gen_query].toString();
+    tft.print(query.length() ? query : String("(not set)"));
+}
+
 void setup() {
     Serial.begin(115200);
     Serial.println();
@@ -26,20 +60,16 @@ void setup() {
     // ======= AP =======
     WiFi.softAP("AiFrame CYD");
 
-    tft.print("AiFrame v");
-    tft.println(F_VERSION);
-    tft.println("AiFrame CYD AP");
-    tft.print("IP: ");
-    tft.println(WiFi.softAPIP());
-    tft.println();
-
     // ======= STA =======
     bool wifi_ok = false;
 
     if (db[kk::wifi_ssid].length()) {
+        tft.setTextSize(2);
+        tft.setTextColor(TFT_GREEN, TFT_BLACK);
+        tft.setCursor(0, 0);
+        tft.print("Connecting");
         WiFi.begin(db[kk::wifi_ssid], db[kk::wifi_pass]);
         wifi_ok = true;
-        tft.print("Connecting");
         int tries = 20;
         while (WiFi.status() != WL_CONNECTED) {
             delay(500);
@@ -49,19 +79,13 @@ void setup() {
                 break;
             }
         }
-        tft.println();
-        tft.print("IP: ");
-        tft.println(WiFi.localIP());
-    } else {
-        tft.println("STA not configured");
     }
-    tft.println();
+
+    show_splash();
 
     if (!wifi_ok) return;
 
-    tft.println("Ready!");
     Serial.println("Ready!");
-
     if (WiFi.status() == WL_CONNECTED) ota.checkUpdate();
 }
 
