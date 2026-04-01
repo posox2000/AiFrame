@@ -49,6 +49,9 @@ void build(sets::Builder& b) {
         }
     }
 
+    b.Image(SH("last_img"), "Последнее изображение", "/image.jpg");
+    b.HTML(SH("img_refresh"), "", "<script>setInterval(function(){var e=document.querySelector('img.image');if(e)e.src='/fetch?path=/image.jpg&t='+Date.now();},10000);</script>");
+
     if (b.Confirm("update"_h)) ota.update();
 
     if (b.build.isAction()) {
@@ -80,6 +83,12 @@ void build(sets::Builder& b) {
 
 void update(sets::Updater& u) {
     u.update(SH("status"), gen.status);
+    if (gen_image_ready) {
+        gen_image_ready = false;
+        String path = "/image.jpg?v=";
+        path += millis();
+        u.update(SH("last_img"), path);
+    }
     if (ota.hasUpdate()) u.update("update"_h, "Доступно обновление. Обновить прошивку?");
 }
 

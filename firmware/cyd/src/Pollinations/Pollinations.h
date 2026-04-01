@@ -2,15 +2,15 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
-
-// #define GHTTP_HEADERS_LOG Serial
-#include <GyverHTTP.h>
+#include <HTTPClient.h>
+#include <FS.h>
 
 #include "tjpgd/tjpgd.h"
 
-#define POLL_HOST "gen.pollinations.ai"
-#define POLL_PORT 443
-#define POLL_LOG(x) Serial.println(x)
+#define POLL_HOST       "gen.pollinations.ai"
+#define POLL_IMAGE_PATH "/image.jpg"
+#define POLL_IMAGE_TMP  "/image.tmp"
+#define POLL_LOG(x)     Serial.println(x)
 
 class Pollinations {
     typedef std::function<void(int x, int y, int w, int h, uint8_t* buf)> RenderCallback;
@@ -21,6 +21,10 @@ class Pollinations {
 
     void setKey(const String& key) {
         _api_key = key;
+    }
+
+    void setFS(fs::FS& fs) {
+        _fs = &fs;
     }
 
     void onRender(RenderCallback cb) {
@@ -45,50 +49,74 @@ class Pollinations {
         if (!query.length()) { status = "empty query"; return false; }
         status = "generating";
 
-        String path = "/image/";
-        path += urlEncode(query);
-        path += "?model=flux";
-        path += "&width=";
-        path += width;
-        path += "&height=";
-        path += height;
-        if (negative.length()) {
-            path += "&negative=";
-            path += urlEncode(negative);
-        }
-        if (_api_key.length()) {
-            path += "&key=";
-            path += _api_key;
-        }
-        path += "&seed=";
-        path += (uint32_t)millis();
-        path += "&nologo=true";
+        String url = "https://";
+        url += POLL_HOST;
+        url += "/image/";
+        url += urlEncode(query);
+        url += "?model=flux&width=";
+        url += width;
+        url += "&height=";
+        url += height;
+        if (negative.length()) { url += "&negative="; url += urlEncode(negative); }
+        if (_api_key.length()) { url += "&key="; url += _api_key; }
+        url += "&seed=";
+        url += (uint32_t)millis();
+        url += "&nologo=true";
+
+        POLL_LOG("GET " + url);
 
         WiFiClientSecure client;
         client.setInsecure();
-        client.setTimeout(30);  // seconds
 
-        ghttp::Client http(client, POLL_HOST, POLL_PORT);
+        HTTPClient http;
+        http.begin(client, url);
+        http.setTimeout(30000);  // ms
+        http.addHeader("User-Agent", "AiFrame/1.0 ESP32");
+        http.addHeader("Accept", "image/jpeg");
+        http.addHeader("Connection", "close");
 
-        ghttp::Client::Headers headers;
-        headers.add("User-Agent", "AiFrame/1.0 ESP32");
-        headers.add("Accept", "image/jpeg");
-        headers.add("Connection", "close");
+        int code = http.GET();
+        Serial.print("HTTP code: "); Serial.println(code);
 
-        if (!http.request(path, "GET", headers)) {
-            status = "request error";
+        if (code != HTTP_CODE_OK) {
+            String body = http.getString();
+            POLL_LOG("Error: " + body);
+            http.end();
+            status = "http " + String(code);
             return false;
         }
 
-        ghttp::Client::Response resp = http.getResponse();
-        if (!resp || resp.code() < 200 || resp.code() >= 300) {
-            http.flush();
-            status = "http error";
-            return false;
+        // Save via writeToStream so chunked transfer encoding is decoded properly.
+        // getStreamPtr() returns the raw transport layer and includes chunk-size
+        // bytes (e.g. "5a2f\r\n") that corrupt the saved file.
+        bool saved = false;
+        if (_fs) {
+            File tmpFile = _fs->open(POLL_IMAGE_TMP, "w");
+            if (tmpFile) {
+                http.writeToStream(&tmpFile);
+                tmpFile.close();
+                saved = true;
+            } else {
+                POLL_LOG("save file open error");
+            }
+        }
+        http.end();
+
+        if (!saved) { status = "save error"; return false; }
+
+        // Decode JPEG from the clean saved file
+        File f = _fs->open(POLL_IMAGE_TMP, "r");
+        bool ok = decodeJpeg(f);
+        f.close();
+
+        if (ok) {
+            _fs->remove(POLL_IMAGE_PATH);
+            bool renamed = _fs->rename(POLL_IMAGE_TMP, POLL_IMAGE_PATH);
+            POLL_LOG(renamed ? "image saved OK" : "image rename FAILED");
+        } else {
+            _fs->remove(POLL_IMAGE_TMP);
         }
 
-        bool ok = decodeJpeg(resp.body());
-        http.flush();
         status = ok ? "done" : "jpeg error";
         return ok;
     }
@@ -101,17 +129,24 @@ class Pollinations {
     RenderCallback _rnd_cb = nullptr;
     RenderEndCallback _end_cb = nullptr;
     Stream* _jpegStream = nullptr;
+    fs::FS* _fs = nullptr;
 
     static Pollinations* self;
 
     static size_t jd_input_cb(JDEC* jdec, uint8_t* buf, size_t len) {
-        yield();  // pet the watchdog
+        yield();
         if (!self || !self->_jpegStream) return 0;
         if (buf) {
             return self->_jpegStream->readBytes(buf, len);
         } else {
-            // skip len bytes
-            for (size_t i = 0; i < len; i++) self->_jpegStream->read();
+            uint8_t tmp[64];
+            size_t remaining = len;
+            while (remaining > 0) {
+                size_t chunk = min(remaining, (size_t)sizeof(tmp));
+                size_t r = self->_jpegStream->readBytes(tmp, chunk);
+                remaining -= r;
+                if (r == 0) break;
+            }
             return len;
         }
     }

@@ -41,8 +41,10 @@ class SettingsT : public sets::SettingsBase {
                 case SH("/fetch"):
                     if (authenticate(req.param("auth").toInt32HEX())) {
                         String path = req.param("path").decodeUrl();
+                        int qpos = path.indexOf('?');
+                        if (qpos >= 0) path = path.substring(0, qpos);
                         File f = fs.openRead(path.c_str());
-                        if (f) server.sendFile(f);
+                        if (f) server.sendFile(f, server.getMime(path));
                         else server.send(500);
                         if (fetch_cb) fetch_cb(path);
                     } else {

@@ -56,6 +56,7 @@ void setup() {
     tft_init();
 
     gen.setKey(db[kk::poll_key]);
+    gen.setFS(LittleFS);
 
     // ======= AP =======
     WiFi.softAP("AiFrame CYD");

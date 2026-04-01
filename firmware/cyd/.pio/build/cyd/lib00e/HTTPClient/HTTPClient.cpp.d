@@ -1,6 +1,32 @@
-.pio/build/cyd/src/main.cpp.o: src/main.cpp \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp_arduino_version.h \
+.pio/build/cyd/lib00e/HTTPClient/HTTPClient.cpp.o: \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src/HTTPClient.cpp \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/HardwareSerial.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Stream.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Print.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/WString.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/pgmspace.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Printable.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_system/include/esp_system.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_err.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_compiler.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_attr.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_bit_defs.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_idf_version.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_mac.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_chip_info.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_random.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_sleep.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/touch_sensor_types.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/soc.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_assert.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/soc_caps.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/gpio_types.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/include/soc/gpio_periph.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/io_mux_reg.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/gpio_struct.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/gpio_reg.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/gpio_sig_map.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/FreeRTOS.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos/FreeRTOSConfig.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_compiler.h \
@@ -33,28 +59,16 @@
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/soc/cpu.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_cpu.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/cpu_hal.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_err.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_compiler.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/soc_caps.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/cpu_types.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/esp32/include/hal/cpu_ll.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_attr.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/xtensa/esp32/include/xtensa/config/extreg.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_bit_defs.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/soc/compare_set.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/include/soc/soc_memory_types.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/soc.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_assert.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_system/include/esp_private/crosscore_int.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_timer/include/esp_timer.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/newlib/platform_include/esp_newlib.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/heap/include/esp_heap_caps.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/heap/include/multi_heap.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_system/include/esp_system.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_common/include/esp_idf_version.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_mac.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_chip_info.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_random.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/port/xtensa/include/freertos/portbenchmark.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/xtensa/include/xtensa/xtensa_api.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/xtensa/include/xtensa/xtensa_context.h \
@@ -63,18 +77,9 @@
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/task.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/list.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos/task_snapshot.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/semphr.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/queue.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/task.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/esp_sleep.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/touch_sensor_types.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/gpio_types.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/include/soc/gpio_periph.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/io_mux_reg.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/gpio_struct.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/gpio_reg.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/gpio_sig_map.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/semphr.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/queue.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/event_groups.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/freertos/include/freertos/timers.h \
@@ -103,15 +108,14 @@
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-psram.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-rgb-led.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-cpu.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/HWCDC.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/USBCDC.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp_arduino_version.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp8266-compat.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/stdlib_noniso.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/binary.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/WCharacter.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/WString.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/pgmspace.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Stream.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Print.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Printable.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/IPAddress.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/WString.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Printable.h \
@@ -121,8 +125,6 @@
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Stream.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/IPAddress.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/HardwareSerial.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/HWCDC.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/USBCDC.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Esp.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/spi_flash/include/esp_partition.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/spi_flash/include/esp_flash.h \
@@ -133,51 +135,15 @@
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_hw_support/include/soc/esp32/spiram.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/io_pin_remap.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h \
- src/config.h src/db.h .pio/libdeps/cyd/GyverDB/src/GyverDBFile.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
- .pio/libdeps/cyd/GyverDB/src/GyverDB.h .pio/libdeps/cyd/GTL/src/GTL.h \
- .pio/libdeps/cyd/GTL/src/./array/array.h \
- .pio/libdeps/cyd/GTL/src/./array/../utils.h \
- .pio/libdeps/cyd/GTL/src/./fifo/fifo_ext.h \
- .pio/libdeps/cyd/GTL/src/./fifo/fifo_static.h \
- .pio/libdeps/cyd/GTL/src/./lbuf/lbuf_ext.h \
- .pio/libdeps/cyd/GTL/src/./lbuf/lbuf_static.h \
- .pio/libdeps/cyd/GTL/src/./list/linked_list.h \
- .pio/libdeps/cyd/GTL/src/./list/list_node.h \
- .pio/libdeps/cyd/GTL/src/./ptr/ptr_shared.h \
- .pio/libdeps/cyd/GTL/src/./ptr/ptr_uniq.h \
- .pio/libdeps/cyd/GTL/src/./stack/stack.h \
- .pio/libdeps/cyd/GTL/src/./stack/stack_ext.h \
- .pio/libdeps/cyd/GTL/src/./stack/stack_static.h \
- .pio/libdeps/cyd/StreamIO/src/StreamIO.h \
- .pio/libdeps/cyd/StreamIO/src/Reader.h \
- .pio/libdeps/cyd/StreamIO/src/Writer.h \
- .pio/libdeps/cyd/StringUtils/src/StringUtils.h \
- .pio/libdeps/cyd/StringUtils/src/utils/PrintString.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Print.h \
- .pio/libdeps/cyd/StringUtils/src/utils/String.h \
- .pio/libdeps/cyd/StringUtils/src/utils/Text.h \
- .pio/libdeps/cyd/StringUtils/src/utils/./convert/b64.h \
- .pio/libdeps/cyd/StringUtils/src/utils/./convert/convert.h \
- .pio/libdeps/cyd/StringUtils/src/utils/./convert/unicode.h \
- .pio/libdeps/cyd/StringUtils/src/utils/./convert/url.h \
- .pio/libdeps/cyd/StringUtils/src/utils/./hash.h \
- .pio/libdeps/cyd/StringUtils/src/utils/Value.h \
- .pio/libdeps/cyd/StringUtils/src/utils/TextList.h \
- .pio/libdeps/cyd/StringUtils/src/utils/TextParser.h \
- .pio/libdeps/cyd/StringUtils/src/utils/convert/qwerty.h \
- .pio/libdeps/cyd/StringUtils/src/utils/list.h \
- .pio/libdeps/cyd/StringUtils/src/utils/parser.h \
- .pio/libdeps/cyd/StringUtils/src/utils/splitter.h \
- .pio/libdeps/cyd/GyverDB/src/utils/access.h \
- .pio/libdeps/cyd/GyverDB/src/utils/anytype.h \
- .pio/libdeps/cyd/GyverDB/src/utils/types.h \
- .pio/libdeps/cyd/FOR_MACRO/FOR_MACRO.h \
- .pio/libdeps/cyd/GyverDB/src/utils/entry.h \
- .pio/libdeps/cyd/GyverDB/src/utils/block.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/LittleFS/src/LittleFS.h \
- src/gen.h src/Pollinations/Pollinations.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-log.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/StreamString.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/base64.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src/HTTPClient.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiClient.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Client.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src/WiFiClientSecure.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFi.h \
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Print.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/IPv6Address.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiType.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_wifi/include/esp_wifi_types.h \
@@ -230,13 +196,11 @@
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiAP.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiScan.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiClient.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Client.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiServer.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Server.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiUdp.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/Udp.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/cbuf.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src/WiFiClientSecure.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src/ssl_client.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/mbedtls/include/mbedtls/platform.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/port/include/mbedtls/esp_config.h \
@@ -274,139 +238,4 @@
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/port/include/aes_alt.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/port/include/aes/esp_aes.h \
  /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/aes_types.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/mbedtls/include/mbedtls/error.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/HTTPClient/src/HTTPClient.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiClient.h \
- src/Pollinations/tjpgd/tjpgd.h src/Pollinations/tjpgd/tjpgdcnf.h \
- src/settings.h .pio/libdeps/cyd/AutoOTA/src/AutoOTA.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/Update/src/Update.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/MD5Builder.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_rom/include/esp_rom_md5.h \
- .pio/libdeps/cyd/Settings/src/SettingsGyver.h \
- .pio/libdeps/cyd/Settings/src/SettingsT.h \
- .pio/libdeps/cyd/GyverHTTP/src/GyverHTTP.h \
- .pio/libdeps/cyd/GyverHTTP/src/./utils/Client.h \
- .pio/libdeps/cyd/GyverHTTP/src/./utils/HeadersParser.h \
- .pio/libdeps/cyd/GyverHTTP/src/./utils/cfg.h \
- .pio/libdeps/cyd/GyverHTTP/src/StreamReader.h \
- .pio/libdeps/cyd/GyverHTTP/src/./utils/EspClient.h \
- .pio/libdeps/cyd/GyverHTTP/src/./utils/Server.h \
- .pio/libdeps/cyd/GyverHTTP/src/./utils/ServerBase.h \
- .pio/libdeps/cyd/GyverHTTP/src/StreamWriter.h \
- .pio/libdeps/cyd/Settings/src/./core/DnsWrapper.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/DNSServer/src/DNSServer.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src/WiFiUdp.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/ESPmDNS/src/ESPmDNS.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mdns/include/mdns.h \
- .pio/libdeps/cyd/Settings/src/./core/SettingsBase.h \
- .pio/libdeps/cyd/Stamp/src/StampKeeper.h \
- .pio/libdeps/cyd/Stamp/src/./core/StampConvert.h \
- .pio/libdeps/cyd/Stamp/src/./core/../Datime.h \
- .pio/libdeps/cyd/Stamp/src/./core/.././core/StampUtils.h \
- .pio/libdeps/cyd/Stamp/src/./core/.././core/stamp_zone.h \
- .pio/libdeps/cyd/Stamp/src/./core/../DaySeconds.h \
- .pio/libdeps/cyd/Settings/src/./core/../web/settings.h \
- .pio/libdeps/cyd/Settings/src/./core/./HybridFS.h \
- .pio/libdeps/cyd/Settings/src/./core/./builder.h \
- .pio/libdeps/cyd/Table/src/Table.h \
- .pio/libdeps/cyd/Table/src/./core/row.h \
- .pio/libdeps/cyd/Table/src/./core/cell.h \
- .pio/libdeps/cyd/Table/src/./core/table_t.h \
- .pio/libdeps/cyd/Settings/src/./core/./AnyPtr.h \
- .pio/libdeps/cyd/Settings/src/./core/./packet.h \
- .pio/libdeps/cyd/BSON/src/BSON.h .pio/libdeps/cyd/BSON/src/BS_MACRO.h \
- .pio/libdeps/cyd/Settings/src/./core/./codes.h \
- .pio/libdeps/cyd/Settings/src/./core/./logger.h \
- .pio/libdeps/cyd/Settings/src/./core/./pos.h \
- .pio/libdeps/cyd/Settings/src/./core/./build.h \
- .pio/libdeps/cyd/Settings/src/./core/./colors.h \
- .pio/libdeps/cyd/Settings/src/./core/./containers_class.h \
- .pio/libdeps/cyd/Settings/src/./core/./tmode.h \
- .pio/libdeps/cyd/Settings/src/./core/./containers.h \
- .pio/libdeps/cyd/Settings/src/./core/./macro.h \
- .pio/libdeps/cyd/Settings/src/./core/./updater.h \
- .pio/libdeps/cyd/Settings/src/./core/ota.h src/timer.h src/tft.h \
- .pio/libdeps/cyd/TFT_eSPI/TFT_eSPI.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/libraries/SPI/src/SPI.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.h \
- .pio/libdeps/cyd/TFT_eSPI/User_Setup_Select.h \
- .pio/libdeps/cyd/TFT_eSPI/TFT_Drivers/ILI9341_Defines.h \
- .pio/libdeps/cyd/TFT_eSPI/Processors/TFT_eSPI_ESP32.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/spi_reg.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/driver/include/driver/spi_master.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/driver/include/driver/spi_common.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/include/soc/lldesc.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/esp_rom/include/esp32/rom/lldesc.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/include/soc/spi_periph.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/periph_defs.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/soc_pins.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/gpio_pins.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/spi_pins.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/sdio_slave_pins.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/sdmmc_pins.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/soc/esp32/include/soc/spi_struct.h \
- /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/spi_types.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/glcdfont.c \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Font16.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Font16.c \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Font32rle.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Font32rle.c \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/gfxfont.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/TomThumb.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMono9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMono12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMono18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMono24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoOblique9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoOblique12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoOblique18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoOblique24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoBold9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoBold12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoBold18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoBold24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoBoldOblique9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoBoldOblique12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoBoldOblique18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeMonoBoldOblique24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSans9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSans12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSans18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSans24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansOblique9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansOblique12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansOblique18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansOblique24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansBold9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansBold12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansBold18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansBold24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansBoldOblique9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansBoldOblique12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansBoldOblique18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSansBoldOblique24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerif9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerif12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerif18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerif24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifItalic9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifItalic12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifItalic18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifItalic24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifBold9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifBold12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifBold18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifBold24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifBoldItalic9pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifBoldItalic12pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifBoldItalic18pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/GFXFF/FreeSerifBoldItalic24pt7b.h \
- .pio/libdeps/cyd/TFT_eSPI/User_Setups/User_Custom_Fonts.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Custom/Orbitron_Light_24.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Custom/Orbitron_Light_32.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Custom/Roboto_Thin_24.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Custom/Satisfy_24.h \
- .pio/libdeps/cyd/TFT_eSPI/Fonts/Custom/Yellowtail_32.h \
- .pio/libdeps/cyd/TFT_eSPI/Extensions/Touch.h \
- .pio/libdeps/cyd/TFT_eSPI/Extensions/Button.h \
- .pio/libdeps/cyd/TFT_eSPI/Extensions/Sprite.h
+ /Users/posox2000/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/mbedtls/mbedtls/include/mbedtls/error.h
