@@ -85,9 +85,7 @@ void update(sets::Updater& u) {
     u.update(SH("status"), gen.status);
     if (gen_image_ready) {
         gen_image_ready = false;
-        String path = "/image.jpg?v=";
-        path += millis();
-        u.update(SH("last_img"), path);
+        u.update(SH("last_img"), String("/image.jpg"));
     }
     if (ota.hasUpdate()) u.update("update"_h, "Доступно обновление. Обновить прошивку?");
 }

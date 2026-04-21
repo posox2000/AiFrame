@@ -45,9 +45,10 @@ void setup() {
     Serial.println();
 
     // RGB LED off (active LOW)
-    pinMode(LED_R, OUTPUT); digitalWrite(LED_R, HIGH);
-    pinMode(LED_G, OUTPUT); digitalWrite(LED_G, HIGH);
-    pinMode(LED_B, OUTPUT); digitalWrite(LED_B, HIGH);
+    pinMode(LED_R, OUTPUT);
+    pinMode(LED_G, OUTPUT);
+    pinMode(LED_B, OUTPUT);
+    led_idle();
 
     WiFi.mode(WIFI_AP_STA);
 
@@ -92,5 +93,7 @@ void setup() {
 
 void loop() {
     sett_tick();
+    touch_tick();
     gen_tick();
+    led_tick();
 }
